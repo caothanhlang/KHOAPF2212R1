@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo HTML DOM </title>
+</head>
+<body>
+    <h1 id="title"> Demo HTML DOM </h1>
+    <p id="content"> This is a paragraph </p>
+    <ul id="list-lesson">
+        <li> lesson 6 </li>
+        <li> lesson 7 </li>
+    </ul>
+    <script> 
+    // tìm kiếm các element trong tài liệu html
+    //trả về element có id được chỉ định 
+    let titleElement = document.getElementById("title");
+    console.log(titleElement);
+    console.log(titleElement.innerHTML);
+    // demo HTML lesson 8 html dom
+    titleElement.innerHTML = "Lesson 8 HTML DOM"
+    //change text color of h1 tag
+    titleElement.style.color = " green";
+    // This is paragraph
+    // with HTML DOM, we can change the content of a HTML tag
+    let paragraphElement = document.getElementById("content");
+    paragraphElement.innerHTML = "with HTML DOM, we can change the content of a HTML tag" 
+    //change background color of paragraph tag 
+    paragraphElement.style.backgroudcolor = "orange";
+
+    let listlessonElement = document.getElementById("list-lesson");
+    let newListItemElement = document.createElement("li");
+    newListItemElement.innerHTML ="Lesson 8 HTML DOM ";
+    console.log(" New list item element");
+    console.log(newListItemElement);
+    listlessonElement.appendChild(newListItemElement);
+    </script>
+</body>
+</html>
