@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo-conditional-statement 2</title>
+</head>
+
+<body>
+    <form action="">
+        Month : <input id="month" type="text">
+        <button id="btn-action">Submit</button>
+    </form>
+    <script>
+        let btnAction = document.getElementById("btn-action");
+        btnAction.addEventListener("click", () => {
+            let month = parseFloat(document.getElementById("month").value);
+            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+                console.log('Thang ${month} có 31 ngay');
+            }
+            else if (month == 4 || month == 6 || month == 9) {
+            console.log('Thang ${month} co 30 ngay');
+        } 
+            else if (month == 2) {
+            console.log('Thang 2 co 28 ngay');
+        } else {
+            alert(" vui long nhap so thang tu 1 den 12")
+        }
+            });
+    </script>
+</body>
+
+</html>
